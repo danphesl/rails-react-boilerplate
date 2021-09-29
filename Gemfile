@@ -51,7 +51,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Custom gems for the application
 gem 'dotenv-rails', groups: [:development, :test]
 
-# test setup
+gem 'devise'
+
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'
   gem "factory_bot_rails"

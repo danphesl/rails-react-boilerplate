@@ -34,5 +34,8 @@ module RailsReactBoilerplate
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+
+    RailsReactBoilerplate::Application
+      .routes.default_url_options[:host] =  ENV["HOST_URL"] || "localhost:3000"
   end
 end
