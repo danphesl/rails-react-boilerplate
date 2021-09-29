@@ -52,6 +52,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'dotenv-rails', groups: [:development, :test]
 
 gem 'devise'
+gem 'pundit'
 
 group :development, :test do
   gem 'rspec-rails', '~> 5.0.0'

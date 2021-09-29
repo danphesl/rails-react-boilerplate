@@ -1,24 +1,24 @@
-# README
+# rails-react-boilerplate
+Boilerplate app to use rails with react
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
+Uses:
+* `devise` for authentication
+* `pundit` for authorization
 
 * Ruby version
+  `2.7.2`
+* Node version `14.18.0`
 
-* System dependencies
+**Getting Started**
 
-* Configuration
+* Create `.env` file.  Copy contents from `.env.example` to `.env`
 
-* Database creation
+* `bundle install` `rails db:create` `rails db:migrate`
 
-* Database initialization
+* `yarn install` for downloading the required packages and run `bin/webpack-dev-server` for assets compilation.
 
-* How to run the test suite
+**Running Application**
 
-* Services (job queues, cache servers, search engines, etc.)
+* run `rails server`
 
-* Deployment instructions
-
-* ...
+* Go to `localhost:3000`
