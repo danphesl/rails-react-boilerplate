@@ -6,14 +6,11 @@ class ApplicationController < ActionController::Base
   after_action :verify_authorized, unless: :devise_controller?
   rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-
-
-
   protected
 
   def user_not_authorized
     flash[:alert] = "Access denied."
-    redirect_to (request.referrer || root_path)
+    redirect_to(request.referer || root_path)
   end
 
   def authorize_class(klass)

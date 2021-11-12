@@ -5,6 +5,7 @@ class ApplicationPolicy
 
   def initialize(user, record)
     raise Pundit::NotAuthorizedError, "must be logged in" unless user
+
     @user = user
     @record = record
   end
@@ -37,7 +38,6 @@ class ApplicationPolicy
     false
   end
 
-
   def self.permit_access(*actions)
     actions.each do |action|
       define_method("#{action}?") do
@@ -57,6 +57,7 @@ class ApplicationPolicy
   class Scope
     def initialize(user, scope)
       raise Pundit::NotAuthorizedError, "must be logged in" unless user
+
       @user = user
       @scope = scope
     end

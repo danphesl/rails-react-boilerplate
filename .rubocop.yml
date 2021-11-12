@@ -15,6 +15,8 @@ AllCops:
     - 'db/**/*'
     - 'script/**/*'
     - 'bin/**/*'
+    - 'spec/rails_helper.rb'
+    - 'spec/spec_helper.rb'
 
 Performance:
   Exclude:
@@ -23,6 +25,9 @@ Performance:
 
 Layout/LineLength:
   Max: 120
+  Enabled: false
+
+Layout/TrailingEmptyLines:
   Enabled: false
 
 Metrics/BlockLength:

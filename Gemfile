@@ -47,19 +47,18 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-
 # Custom gems for the application
-gem 'dotenv-rails', groups: [:development, :test]
+gem 'dotenv-rails', groups: %i[development test]
 
 gem 'devise'
 gem 'pundit'
 
 group :development, :test do
-  gem 'rspec-rails', '~> 5.0.0'
-  gem "factory_bot_rails"
-  gem "faker"
   gem "database_cleaner-active_record"
   gem "database_cleaner-sequel"
+  gem "factory_bot_rails"
+  gem "faker"
+  gem 'rspec-rails', '~> 5.0.0'
   gem "shoulda-matchers", "~> 5.0"
 end
 
