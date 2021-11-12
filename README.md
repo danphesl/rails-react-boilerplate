@@ -4,6 +4,7 @@ Boilerplate app to use rails with react
 Uses:
 * `devise` for authentication
 * `pundit` for authorization
+* `pronto` for static code analysis
 
 * Ruby version
   `2.7.2`
@@ -22,3 +23,9 @@ Uses:
 * run `rails server`
 
 * Go to `localhost:3000`
+
+**Setting Github action**
+
+Add new secret to github -> security -> secrets
+`PRONTO_GITHUB_TOKEN`
+[https://help.github.com/en/actions/configuring-and-managing-workflows/creating-and-storing-encrypted-secrets]
