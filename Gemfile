@@ -62,3 +62,19 @@ group :development, :test do
   gem "database_cleaner-sequel"
   gem "shoulda-matchers", "~> 5.0"
 end
+
+# static checkers
+group :development, :test do
+  gem 'rubocop-performance', require: false
+  gem 'rubocop-rails', require: false
+  gem 'rubocop-rspec', require: false
+
+  # Pronto
+  gem 'pronto'
+  gem 'pronto-brakeman', require: false
+  gem 'pronto-fasterer', require: false
+  gem 'pronto-flay', require: false
+  gem 'pronto-rails_best_practices', require: false
+  gem 'pronto-reek', require: false
+  gem 'pronto-rubocop', require: false
+end

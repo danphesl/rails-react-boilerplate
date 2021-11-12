@@ -1,0 +1,75 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+  #  # RuboCop has a bunch of cops enabled by default. This setting tells RuboCop
+  #  # to ignore them, so only the ones explicitly set in this file are enabled.
+  #  DisabledByDefault: true
+  Exclude:
+    - 'tmp/**/*'
+    - 'vendor/**/*'
+    - 'node_modules/**/*'
+    - 'db/**/*'
+    - 'script/**/*'
+    - 'bin/**/*'
+
+Performance:
+  Exclude:
+    - 'test/**/*'
+    - 'spec/**/*'
+
+Layout/LineLength:
+  Max: 120
+  Enabled: false
+
+Metrics/BlockLength:
+  IgnoredMethods: ['describe', 'context']
+
+Style/Documentation:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantSelf:
+  Enabled: false
+
+Style/StringLiterals:
+  Enabled: false
+  EnforcedStyle: double_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+
+Style/StringLiteralsInInterpolation:
+  Enabled: false
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: :true
+
+Naming/VariableNumber:
+  EnforcedStyle: snake_case
+
+Naming/RescuedExceptionsVariableName:
+  Enabled: :false
+
+Layout/CaseIndentation:
+  Enabled: false
+
+Layout/MultilineMethodCallIndentation:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Enabled: false
